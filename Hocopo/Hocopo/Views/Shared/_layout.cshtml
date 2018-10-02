@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}<!DOCTYPE html>
+<html>
+<head>
+    <title>Hocopeloos</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Hocopoco</h1>
+        <menu>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/app/contact">Contact</a></li>
+                <li><a href="/app/about">About</a></li>
+            </ul>
+        </menu>
+    </header>
+    <section>
+        <h2>@ViewBag.Title</h2>
+    </section>
+    @RenderBody()
+    <footer>Copyright 2018 Hocopoco</footer>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
