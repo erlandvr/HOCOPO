@@ -13,13 +13,14 @@ namespace Hocopo.Controllers
         {
             return View();
         }
-
+        [HttpGet("Contact")]
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact Us";
 
             return View();
         }
+        [HttpGet("About")]
         public IActionResult About()
         {
             ViewBag.Title = "About Us";
