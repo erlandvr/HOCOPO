@@ -1,1 +1,21 @@
-﻿<h2>@ViewBag.Title</h2>
+﻿@model ContactModel
+@{ 
+    ViewBag.Title = "Check-in here";
+}
+<div id="TheForm">
+    <form method="post">
+        <label asp-for="Email" >Email:</label>
+        <br />
+        <input asp-for="Email" />
+        <br />
+        <label asp-for="Description">description:</label>
+        <br />
+        <textarea rows="4" asp-for="Description"></textarea>/>
+        <br />
+        <label asp-for="Duration" >duration:</label>
+        <br />
+        <input asp-for="Duration" />
+        <br />
+        <input type="submit" />
+    </form>
+</div>()

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hocopo.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,14 @@ namespace Hocopo.Controllers
         [HttpGet("Contact")]
         public IActionResult Contact()
         {
-            ViewBag.Title = "Contact Us";
-
             return View();
         }
+        [HttpPost("Contact")]
+        public IActionResult Contact(ContactModel model)
+        {  
+            return View();
+        }
+
         [HttpGet("About")]
         public IActionResult About()
         {
