@@ -2,20 +2,29 @@
 @{ 
     ViewBag.Title = "Check-in here";
 }
+@section Scripts {
+<script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
 <div id="TheForm">
     <form method="post">
-        <label asp-for="Email" >Email:</label>
+        <div asp-validation-summary="ModelOnly"></div>
+        <label asp-for="Email">Email:</label>
         <br />
         <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
         <br />
-        <label asp-for="Description">description:</label>
+        <label asp-for="Description">What will your mastermind be producing?</label>
         <br />
-        <textarea rows="4" asp-for="Description"></textarea>/>
+        <textarea rows="8" asp-for="Description"></textarea>
+        <span asp-validation-for="Description"></span>
         <br />
-        <label asp-for="Duration" >duration:</label>
+        <label asp-for="Duration">How long will you be coding?(in minutes)</label>
         <br />
-        <input asp-for="Duration" />
+        <input type="number" asp-for="Duration" />
+        <span asp-validation-for="Duration"></span>
         <br />
         <input type="submit" />
+        <div>@ViewBag.UserMessage</div>
     </form>
-</div>()
+</div>
