@@ -4,6 +4,7 @@
 }
 <div id="TheForm">
     <form method="post">
+        <div asp-validation-summary="All"></div>
         <label asp-for="Email" >Email:</label>
         <br />
         <input asp-for="Email" />
@@ -14,7 +15,7 @@
         <br />
         <label asp-for="Duration" >duration:</label>
         <br />
-        <input asp-for="Duration" />
+        <input type="time" asp-for="Duration" />
         <br />
         <input type="submit" />
     </form>

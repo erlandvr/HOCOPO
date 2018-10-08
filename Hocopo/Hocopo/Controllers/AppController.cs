@@ -22,6 +22,16 @@ namespace Hocopo.Controllers
         [HttpPost("Contact")]
         public IActionResult Contact(ContactModel model)
         {  
+            if (ModelState.IsValid)
+            {
+             // send email to confirm
+            return View();
+            }
+            else
+            {
+            // show errors
+            }
+
             return View();
         }
 
