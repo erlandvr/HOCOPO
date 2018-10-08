@@ -1,30 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Hocopo</title>
-    <link href="~/css/site.css" rel="stylesheet" />
-</head>
+    <title>Hocopo</title>    
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" /></head>
 <body>
-    <header>
-        <h1>Welcome to Hocopo</h1>
-        <menu>
-            <ul>
+    <header class="container-fluid">
+        <br />
+        <h1 class="text-center">Hocopo</h1>
+        <menu class="text-right">
+            <ul style="list-style-type:none">
                 <li><a asp-controller="App" asp-action="Index">Home</a></li>
                 <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
                 <li><a asp-controller="App" asp-action="About">About</a></li>
             </ul>
         </menu>
     </header>
-    <section>
-        <h2>@ViewBag.Title</h2>
-    </section>
-    @RenderBody()
-
-    <footer>
     <br />
-    Copyright 2018 Hocopoco</footer>
+    <br />
+    <div class="text-center"
+        <section class="container-fluid">
+            <h2>@ViewBag.Title</h2>
+        </section>
+        @RenderBody()
+        <footer class="container-fluid">
+            <br />
+            <div class="text-center">Copyright 2018 Hocopoco</div>
+        </footer>
+    </div>
 
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/index.js"></script>
     @RenderSection("scripts", false)
 </body>

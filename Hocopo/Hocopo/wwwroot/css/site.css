@@ -1,12 +1,18 @@
-﻿menu li {
-    display: inline;
-
+﻿h1 {
+    position: relative;
+    width: 50%;
+    height: 100px;
+    text-align: left;
+    color: #0051A8;
 }
-
-menu li::after {
-    content: ' |';
+menu {
+    position: absolute;
+    top: 0px;
+    right: 80px;
 }
-
-menu li:last-of-type::after {
-    content: "";
+header {
+    background-color: #011627;
+}
+#TheForm {
+    
 }
