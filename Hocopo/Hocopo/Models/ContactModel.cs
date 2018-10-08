@@ -13,9 +13,10 @@ namespace Hocopo.Models
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        [MaxLength(1000, ErrorMessage = "your discription is too long")]
+        [MinLength(50)]
+        [MaxLength(1000)]
         public string Description { get; set; }
-        [Required]      
-        public TimeSpan Duration { get; set; }
+        [Required]     
+        public int Duration { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Hocopo</title>
@@ -8,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Hocopoco</h1>
+        <h1>Welcome to Hocopo</h1>
         <menu>
             <ul>
                 <li><a asp-controller="App" asp-action="Index">Home</a></li>
@@ -21,8 +19,13 @@
         <h2>@ViewBag.Title</h2>
     </section>
     @RenderBody()
-    <footer>Copyright 2018 Hocopoco</footer>
 
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <footer>
+    <br />
+    Copyright 2018 Hocopoco</footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>
